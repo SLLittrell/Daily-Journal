@@ -1,3 +1,4 @@
 # Daily-Journal
 My daily journal
-images/fcva1kxtfdk.png
+![Wireframe](./images/fcva1kxtfdk.png)
+
