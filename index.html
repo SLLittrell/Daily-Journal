@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Journal</title>
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
     <main>
-        <header>
+        <header class="journalHeader">
             <img src="https://us04images.zoom.us/p/aTvFAYr5TaeyGPg9IVPI6w/e82da461-4f4c-43cc-9084-e56e87265519-5135?type=small" alt="Picture of a crazy girl">
             <h1 class="journalName">Chaos Collective</h1>
         </header>
@@ -15,18 +16,30 @@
             <p>Stacey</p>
         </section>
         <section class="formContainer">
-            <form>
-                <input type="date" id="eDate" name="entryDate">
-                <input type="text" id="concept" name="concept" required>
-                <textarea name="jEntry" value="Journal Entry"></textarea>
-                <input type="submit" value="Submit">
+            <form class="formContainer__form">
+                <input class="dateInput" type="date" id="eDate" name="entryDate">
+                <input class="conceptInput" type="text" id="concept" name="concept" value="Concepts" required>
+                <textarea class="journalInput" name="jEntry" value="Journal Entry"></textarea>
+                <input class="submitbutton" type="submit" value="Submit">
+                <div>
+                    <p>My mood today is...</p>
+                    <input type="radio" id="Amazing" name="mood" value="Amazing">
+                    <label for="Amazing">Amazing</label>
+                    <input type="radio" id="Good" name="mood" value="Good">
+                    <label for="Good">Good</label>
+                    <input type="radio" id="Okay" name="mood" value="Okay">
+                    <label for="Okay">Okay</label>
+                    <input type="radio" id="Awful" name="mood" value="Awful">
+                    <label for="Awful">Taylor Swift after a breakup</label>
+                </div>
             </form>
+            <aside class="pastEntry">
+                <p>Past Entries</p>
+                <a href=""></a>
+            </aside>
         </section>
-        <aside class="pastEntry">
-            <a href=""></a>
-        </aside>
         <footer>
-
+            This is my footer
         </footer>
     </main>
 </body>
