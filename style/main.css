@@ -1,10 +1,21 @@
+@import "form.css";
 main {
     display: flex;
+    flex-direction: column;
 }
 .journalHeader {
     display: flex;
     background-color: aqua;
     justify-content: space-between;
+
+}
+.journalHeader img {
+   
+}
+.journalName {
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
 }
 .userName {
     display: flex;
@@ -15,13 +26,6 @@ main {
 }
 .formContainer {
     display: flex;
-}
-.formContainer__form {
-    display: flex;
-    flex: 75%;
-    background-color: azure;
-    flex-direction: column;
-
 }
 .pastEntry {
     display: flex;
@@ -35,6 +39,8 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 footer {
+    height: 100%;
     display: flex;
+    flex-basis: 100%;
     background-color: cyan;
 }

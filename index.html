@@ -17,21 +17,23 @@
         </section>
         <section class="formContainer">
             <form class="formContainer__form">
-                <input class="dateInput" type="date" id="eDate" name="entryDate">
-                <input class="conceptInput" type="text" id="concept" name="concept" value="Concepts" required>
-                <textarea class="journalInput" name="jEntry" value="Journal Entry"></textarea>
-                <input class="submitbutton" type="submit" value="Submit">
-                <div>
-                    <p>My mood today is...</p>
-                    <input type="radio" id="Amazing" name="mood" value="Amazing">
-                    <label for="Amazing">Amazing</label>
-                    <input type="radio" id="Good" name="mood" value="Good">
-                    <label for="Good">Good</label>
-                    <input type="radio" id="Okay" name="mood" value="Okay">
-                    <label for="Okay">Okay</label>
-                    <input type="radio" id="Awful" name="mood" value="Awful">
-                    <label for="Awful">Taylor Swift after a breakup</label>
-                </div>
+                <fieldset>
+                    <input class="dateInput" type="date" id="eDate" name="entryDate">
+                    <input class="conceptInput" type="text" id="concept" name="concept" value="Concepts" required>
+                    <textarea class="journalInput" name="jEntry" value="Journal Entry"></textarea>
+                    <input class="submitbutton" type="submit" value="Submit"><br>
+                    <div>
+                        <p>My mood today is...</p>
+                        <input type="radio" id="Amazing" name="mood" value="Amazing">
+                        <label for="Amazing">Amazing</label>
+                        <input type="radio" id="Good" name="mood" value="Good">
+                        <label for="Good">Good</label>
+                        <input type="radio" id="Okay" name="mood" value="Okay">
+                        <label for="Okay">Okay</label>
+                        <input type="radio" id="Awful" name="mood" value="Awful">
+                        <label for="Awful">Taylor Swift after a breakup</label>
+                    </div>
+                </fieldset>
             </form>
             <aside class="pastEntry">
                 <p>Past Entries</p>
@@ -39,7 +41,7 @@
             </aside>
         </section>
         <footer>
-            This is my footer
+           <p>This is my footer</p> 
         </footer>
     </main>
 </body>
