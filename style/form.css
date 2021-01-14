@@ -1,0 +1,33 @@
+.formContainer {
+    display: flex;
+}
+.formContainer__form {
+    display: flex;
+    flex-basis: 75%;
+    background-color: azure;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.formContainer__form div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-self: start;
+    margin-left:;
+}
+.dateInput {
+    width: 25%;
+}
+.conceptInput {
+    margin-left: 25%;
+    width: 25%;
+}
+.journalInput {
+    width: 200%;
+    height: 50%;
+}
+.submitbutton {
+    width: 25%;
+    height: 25%;
+}

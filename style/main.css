@@ -1,0 +1,46 @@
+@import "form.css";
+main {
+    display: flex;
+    flex-direction: column;
+}
+.journalHeader {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+
+}
+.journalHeader img {
+   
+}
+.journalName {
+    margin-left: 1px;
+    text-align: center;
+    align-self: center;
+}
+.userName {
+    display: flex;
+    background-color: aquamarine;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formContainer {
+    display: flex;
+}
+.pastEntry {
+    display: flex;
+    justify-content: center;
+    flex: 25%;
+    background-color: cadetblue;
+}
+.pastEntry p {
+    text-align: center;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer {
+    height: 100%;
+    display: flex;
+    flex-basis: 100%;
+    background-color: cyan;
+}
