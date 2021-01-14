@@ -12,17 +12,25 @@
             <img src="https://us04images.zoom.us/p/aTvFAYr5TaeyGPg9IVPI6w/e82da461-4f4c-43cc-9084-e56e87265519-5135?type=small" alt="Picture of a crazy girl">
             <h1 class="journalName">Chaos Collective</h1>
         </header>
-        <section class="userName">
-            <p>Stacey</p>
-        </section>
+        <div class="userName">
+            <h2>Stacey</h2>
+        </div>
         <section class="formContainer">
             <form class="formContainer__form">
-                <fieldset class="form__field">
-                    <input class="dateInput" type="date" id="eDate" name="entryDate">
-                    <input class="conceptInput" type="text" id="concept" name="concept" value="Enter Concepts" required>
-                    <textarea class="journalInput" name="jEntry" value="Journal Entry"></textarea>
-                    <input class="submitbutton" type="submit" value="Submit">
-                    <div class="moods">
+                <fieldset class="dateInput">
+                    <label for="eDate">Date</label>
+                    <input type="date" id="eDate" name="entryDate">
+                </fieldset>
+                <fieldset class="conceptInput">
+                    <label for="concept">Concepts Covered</label>
+                    <input type="text" id="concept" name="concept" value="Enter Concepts" required>
+                </fieldset>
+                <fieldset class="journalInput"> 
+                    <label for="Journal">Journal Entry</label>
+                    <textarea name="jEntry" id="Journal" value="Journal Entry"></textarea>
+                </fieldset>
+                <fieldset class="moods">
+                    <div>
                         <p>My mood today is...</p>
                         <input type="radio" id="Amazing" name="mood" value="Amazing">
                         <label for="Amazing">Amazing</label>
@@ -34,10 +42,12 @@
                         <label for="Awful">Taylor Swift after a breakup</label>
                     </div>
                 </fieldset>
+                <fieldset class="submitbutton">
+                    <input type="submit" value="Submit">
+                </fieldset>
             </form>
             <aside class="pastEntry">
                 <p><u>Past Entries</u></p>
-                <a href=""></a>
             </aside>
         </section>
         <footer>
@@ -46,5 +56,6 @@
             </div>
         </footer>
     </main>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
