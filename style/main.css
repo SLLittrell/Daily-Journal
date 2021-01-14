@@ -22,11 +22,9 @@ main {
     font-size: 20px;
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
- .formContainer { 
-    display: flex;
-} 
 .pastEntry {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-grow: inherit;
     background-color: cadetblue;

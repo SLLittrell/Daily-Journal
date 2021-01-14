@@ -1,39 +1,38 @@
 .formContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: inherit;
-    flex: auto;
-    margin-bottom: 10px;
+    margin: 5px;
 }
-    .formContainer__form {
-    display: flex;
-    flex-basis: 75%;
-    background-color: azure;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.form__field {
+.formContainer__form {
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
+    flex-basis: 75%;
+    background-color: rgb(141, 226, 226);
+    flex-wrap: wrap;
 }
-
 .dateInput {
-    width: 25%;
-    margin-bottom: 10px;
+    width: min-content;
 }
 .conceptInput {
-    justify-self: left;
-    width: 25%;
+    
+    width: min-content;
 }
 .journalInput {
-    width:50%;
     margin-top: 5px;
+    width: min-content;
 }
 .submitbutton {
     margin-top: 5px;
-    width: 25%;
-    height: 25%;
+    width: min-content;
+}
+.moods {
+    width:75%;
+}
+.pastEntry {
+    justify-content: flex-start;
+    /* display: flex; */
+    flex-basis: 25%;
+    text-align: center;
 }
 footer {
     /* margin-top: 500px; */
