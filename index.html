@@ -6,7 +6,7 @@
     <title>Daily Journal</title>
     <link rel="stylesheet" href="./style/main.css">
 </head>
-<body>
+ <body>
     <main>
         <header class="journalHeader">
             <img src="https://us04images.zoom.us/p/aTvFAYr5TaeyGPg9IVPI6w/e82da461-4f4c-43cc-9084-e56e87265519-5135?type=small" alt="Picture of a crazy girl">
@@ -17,12 +17,12 @@
         </section>
         <section class="formContainer">
             <form class="formContainer__form">
-                <fieldset>
+                <fieldset class="form__field">
                     <input class="dateInput" type="date" id="eDate" name="entryDate">
                     <input class="conceptInput" type="text" id="concept" name="concept" value="Concepts" required>
                     <textarea class="journalInput" name="jEntry" value="Journal Entry"></textarea>
-                    <input class="submitbutton" type="submit" value="Submit"><br>
-                    <div>
+                    <input class="submitbutton" type="submit" value="Submit">
+                    <div class="moods">
                         <p>My mood today is...</p>
                         <input type="radio" id="Amazing" name="mood" value="Amazing">
                         <label for="Amazing">Amazing</label>
@@ -41,7 +41,9 @@
             </aside>
         </section>
         <footer>
-           <p>This is my footer</p> 
+            <div>
+                <p>This is my footer</p>
+            </div>
         </footer>
     </main>
 </body>
