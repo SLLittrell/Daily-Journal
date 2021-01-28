@@ -13,6 +13,9 @@ main {
     justify-content: space-between;
 
 }
+.hiddenElement {
+    visibility: hidden;
+}
 
 .userName {
     width: auto;
