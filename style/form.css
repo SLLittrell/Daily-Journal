@@ -9,15 +9,18 @@
     flex-basis: 75%;
     background-color: rgb(141, 226, 226);
     flex-wrap: wrap;
+    justify-content: center;
 }
 .dateInput {
+    margin: 10px;
     width: min-content;
 }
 .conceptInput {
-    
+    margin: 10px;
     width: min-content;
 }
 .journalInput {
+    margin: 10px;
     margin-top: 5px;
     width: min-content;
 }
@@ -26,6 +29,7 @@
     width: min-content;
 }
 .moods {
+    margin: 10px;
     width:75%;
 }
 .pastEntry {
