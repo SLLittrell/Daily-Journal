@@ -48,7 +48,7 @@ eventHub.addEventListener("click", clickEvent => {
                 date:document.querySelector("#eDate").value,
                 concept:document.querySelector("#concept").value,
                 entry: document.querySelector("#Journal").value,
-                mood:document.querySelector("#Amazing,#Good,#Okay,#Awful").value
+                mood: document.querySelector(".value").value
             }
 
 

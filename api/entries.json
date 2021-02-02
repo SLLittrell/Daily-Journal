@@ -34,6 +34,13 @@
       "entry": "hry",
       "mood": "Amazing",
       "id": 5
+    },
+    {
+      "date": "2021-02-02",
+      "concept": "Event Listeners",
+      "entry": "I heard when using React, we won't need event listeners...yay!",
+      "mood": "Amazing",
+      "id": 6
     }
   ]
 }
