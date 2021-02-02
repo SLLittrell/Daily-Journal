@@ -1,3 +1,5 @@
+import { saveJournalEntry } from "../JournalDataProvider.js";
+
 const formContainer = document.querySelector(".formContainer")
 
 
@@ -33,3 +35,24 @@ return formContainer.innerHTML =
     </form>`
 }
 
+const eventHub = document.querySelector(".mainContainer")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "record") {
+        clickEvent.preventDefault()
+        // console.log ("click happened")
+    // debugger
+        // Make a new object representation of a note
+        const newEntry = {
+            // Key/value pairs here
+                date:document.querySelector("#eDate").value,
+                concept:document.querySelector("#concept").value,
+                entry: document.querySelector("#Journal").value,
+                mood:document.querySelector("#Amazing,#Good,#Okay,#Awful").value
+            }
+
+
+        // Change API state and application state
+        saveJournalEntry(newEntry)
+    }
+})

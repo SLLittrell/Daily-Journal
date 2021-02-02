@@ -1,25 +1,39 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "07/24/2025",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Amazing"
-        },
-        {
-            "id": 2,
-            "date": "07/26/2025",
-            "concept": "Complex Flexbox",
-            "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
-            "mood": "Taylor Swift after a breakup"
-        },
-        {   
-            "id": 3,
-            "date": "08/04/2025",
-            "concept": "JavaScript Functions",
-            "entry": "I learned more about functions, and what they can be used for to streamline your websites data",
-            "mood": "Okay"
-        }
-    ]
+  "entries": [
+    {
+      "id": 1,
+      "date": "07/24/2025",
+      "concept": "HTML & CSS",
+      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+      "mood": "Amazing"
+    },
+    {
+      "id": 2,
+      "date": "07/26/2025",
+      "concept": "Complex Flexbox",
+      "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
+      "mood": "Taylor Swift after a breakup"
+    },
+    {
+      "id": 3,
+      "date": "08/04/2025",
+      "concept": "JavaScript Functions",
+      "entry": "I learned more about functions, and what they can be used for to streamline your websites data",
+      "mood": "Okay"
+    },
+    {
+      "date": "2021-02-02",
+      "concept": "Javascript Functions",
+      "entry": "hey",
+      "mood": "Amazing",
+      "id": 4
+    },
+    {
+      "date": "2021-02-02",
+      "concept": "Javascript Functions",
+      "entry": "hry",
+      "mood": "Amazing",
+      "id": 5
+    }
+  ]
 }
