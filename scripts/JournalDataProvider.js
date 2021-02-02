@@ -1,12 +1,34 @@
 /*
  *   Journal data provider for Daily Journal application
  *
- *      Holds the raw data about each entry and exports
+ *      fetches the api data about each entry and exports
  *      functions that other modules can use to filter
  *      the entries for different purposes.
  */
+const eventHub = document.querySelector(".mainContainer")
 
-// use fetch() to get data from API
+
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+// Use `fetch` with the POST method to add your entry to your API
+export const saveJournalEntry = (newJournalEntry) => {
+
+    return fetch("http://localhost:8088/entries", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newJournalEntry)
+        })
+        .then(getEntries)// <-- Get all journal entries
+        .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
+         
+        
+}
+
+ // use fetch() to get data from API
 let journalEntry = []
 
 
