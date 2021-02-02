@@ -2,15 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     margin: 5px;
+    flex-basis: 75%;
+    background-color: rgb(141, 226, 226);
 }
-.formContainer__form {
+/* .formContainer__form {
     display: flex;
     flex-direction: column;
-    flex-basis: 75%;
     background-color: rgb(141, 226, 226);
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
 .dateInput {
     margin: 10px;
     width: min-content;
@@ -22,7 +23,12 @@
 .journalInput {
     margin: 10px;
     margin-top: 5px;
-    width: min-content;
+    width: 250px;
+    height: 250px;
+}
+textarea {
+    width: 300px;
+    height: 200px;
 }
 .submitbutton {
     margin-top: 5px;
@@ -30,7 +36,7 @@
 }
 .moods {
     margin: 10px;
-    width:75%;
+    width:100%;
 }
 .pastEntry {
     justify-content: flex-start;

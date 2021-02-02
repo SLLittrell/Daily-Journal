@@ -17,6 +17,10 @@ main {
     visibility: hidden;
 }
 
+.Form__Entry__Conatainer {
+    display: flex;
+}
+
 .userName {
     width: auto;
     display: flex;
