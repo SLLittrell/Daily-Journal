@@ -32,9 +32,11 @@ main {
 .pastEntry {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex-grow: inherit;
     background-color: cadetblue;
+}
+.journalEntry{
+    text-align: left ;
 }
 .pastEntry p {
     text-align: center;
