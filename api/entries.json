@@ -1,18 +1,12 @@
 {
   "entries": [
     {
-      "date": "2021-02-18",
+      "date": "2021-02-17",
       "concept": "Javascript Functions",
-      "entry": "Hello",
+      "entry": "hey",
       "moodId": "3",
+      "instructorId": "2",
       "id": 1
-    },
-    {
-      "date": "2021-02-11",
-      "concept": "Javascript Functions",
-      "entry": "Hello",
-      "moodId": "2",
-      "id": 2
     }
   ],
   "moods": [
@@ -31,6 +25,20 @@
     {
       "id": 4,
       "label": "Taylor Swift after a breakup"
+    }
+  ],
+  "instructor": [
+    {
+      "id": 1,
+      "first_name": "Jisie"
+    },
+    {
+      "id": 2,
+      "first_name": "Scott"
+    },
+    {
+      "id": 3,
+      "first_name": "Sage"
     }
   ]
 }

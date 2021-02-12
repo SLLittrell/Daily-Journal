@@ -4,6 +4,7 @@
  *    there are items in the collection exposed by the
  *    data provider component
  */
+import { getInstructor, useInstructor } from "../instructorDataProvider.js"
 import { getEntries, useJournalEntries } from "../JournalDataProvider.js"
 import { getMoods, useMoods } from "../MoodDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
@@ -16,21 +17,23 @@ export const EntryListComponent = () => {
     // Use the journal entry data from the data provider component
     getEntries()
     .then(getMoods)
+    .then(getInstructor)
     .then ( () => {
         const entries = useJournalEntries()
         const moods = useMoods()
-        render (entries, moods)
-        
+        const instructor = useInstructor()
+        render (entries, moods, instructor)
     })
     
 }
 
-const render = (entryObject, moodObject) => {
+const render = (entryObject, moodObject, insructorObject) => {
     const entryMoods = entryObject.map(entry => {
         const relatedMood = moodObject.find(mood => mood.id === parseInt(entry.moodId))
-        return JournalEntryComponent(entry,relatedMood)
+        const relatedInstructor = insructorObject.find(teach => teach.id === parseInt(entry.instructorId))
+        return JournalEntryComponent(entry, relatedMood, relatedInstructor)
         
-    })
+    }).join(" ")
 
     entryLog.innerHTML += `
         <div class="entryLog">
@@ -38,12 +41,3 @@ const render = (entryObject, moodObject) => {
         </div>
     `
 }
-// let journalHTMLRep = ""
-// for (const entry of entries) {
-//     journalHTMLRep = JournalEntryComponent(entry)
-//     /*
-//         Invoke the component that returns an
-//         HTML representation of a single entry
-//     */
-//     
-// }
