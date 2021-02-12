@@ -1,3 +1,4 @@
+import { getInstructor, useInstructor } from "../instructorDataProvider.js";
 import { saveJournalEntry } from "../JournalDataProvider.js";
 import { getMoods, useMoods} from "../MoodDataProvider.js";
 
@@ -8,12 +9,21 @@ export const JournalForm = () => {
     getMoods()
         .then(()=>{
             const moodArray = useMoods()
+
+    getInstructor()
+    .then(()=>{
+        const instructorArray = useInstructor()
 formContainer.innerHTML =
     `<form class="formContainer__form">
     <fieldset class="dateInput">
     <label for="eDate">Date</label>
     <input type="date" id="eDate" name="entryDate">
     </fieldset>
+    <select class="instructor_dropdown" id="instructorSelect">
+    <option value="0">Choose Instructor</option>
+    ${instructorArray.map(teach => 
+        `<option value="${teach.id}">${teach.first_name}</option>`)}
+    </select>
     <fieldset class="conceptInput">
     <label for="concept">Concepts Covered</label>
     <input type="text" id="concept" name="concept" required>
@@ -35,6 +45,7 @@ formContainer.innerHTML =
     <input type="submit" class="submitbutton" id="record" value="Submit Journal Entry">
     </form>`
     })
+})
 }
 
 const eventHub = document.querySelector(".mainContainer")
@@ -50,7 +61,8 @@ eventHub.addEventListener("click", clickEvent => {
                 date:document.querySelector("#eDate").value,
                 concept:document.querySelector("#concept").value,
                 entry: document.querySelector("#Journal").value,
-                moodId: document.querySelector("#MoodSelect").value
+                moodId: document.querySelector("#MoodSelect").value, 
+                instructorId: document.querySelector("#instructorSelect").value 
             }
 
 
