@@ -10,6 +10,8 @@ export const JournalEntryComponent = (entry, moodObj, instructorObj) => {
           Concept Covered: ${entry.concept}<br>
           Journal Entry: ${entry.entry}<br>
           Mood: ${moodObj.label}
+          <button id="deleteEntry--${entry.id}">Delete</button>
         </section><br>
     `
 }
+
