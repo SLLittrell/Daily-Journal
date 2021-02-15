@@ -50,6 +50,21 @@ eventHub.addEventListener("journalStateChanged", event => {
     EntryListComponent()
 })
 
+eventHub.addEventListener("moodValueChange", event => {
+    console.log("heard")
+    console.log (event.detail.moodChosen)
+    // debugger
+    getEntries()
+    .then(() => {
+        const entryArray = useJournalEntries()
+        const moodPicked= event.detail.moodChosen
+        const filteredEntries= entryArray.filter(mood => parseInt(mood.moodId) === parseInt(moodPicked))
+    
+        console.log(filteredEntries)
+    })
+})
+
+
 
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteEntry--")) {
