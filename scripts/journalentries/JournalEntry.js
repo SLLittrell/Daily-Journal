@@ -9,7 +9,7 @@ export const JournalEntryComponent = (entry, moodObj, instructorObj) => {
           Instructor: ${instructorObj.first_name}<br>
           Concept Covered: ${entry.concept}<br>
           Journal Entry: ${entry.entry}<br>
-          Mood: ${moodObj.label}
+          Mood: ${moodObj.label}<br>
           <button id="deleteEntry--${entry.id}">Delete</button>
         </section><br>
     `

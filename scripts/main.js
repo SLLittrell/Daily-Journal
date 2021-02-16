@@ -1,5 +1,6 @@
 import { JournalForm } from './journalform/JournalForm.js'
 import {EntryListComponent} from './journalentries/JournalEntryList.js'
+import { FilterBar } from './filter/FilterBar.js'
 
 EntryListComponent()
 
@@ -13,3 +14,5 @@ EntryListComponent()
 // const entryArray = getEntries()
 
 JournalForm()
+
+FilterBar()
