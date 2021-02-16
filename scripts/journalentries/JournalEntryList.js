@@ -24,6 +24,7 @@ export const EntryListComponent = () => {
         const moods = useMoods()
         const instructor = useInstructor()
         render (entries, moods, instructor)
+        
     })
     
 }
@@ -32,9 +33,10 @@ const render = (entryObject, moodObject, insructorObject) => {
     const entryMoods = entryObject.map(entry => {
         const relatedMood = moodObject.find(mood => mood.id === parseInt(entry.moodId))
         const relatedInstructor = insructorObject.find(teach => teach.id === parseInt(entry.instructorId))
-        return JournalEntryComponent(entry, relatedMood, relatedInstructor)
+            return JournalEntryComponent(entry, relatedMood, relatedInstructor)
         
     }).join(" ")
+
 
     entryLog.innerHTML = `
         <div class="entryLog">
@@ -51,17 +53,25 @@ eventHub.addEventListener("journalStateChanged", event => {
 })
 
 eventHub.addEventListener("moodValueChange", event => {
-    console.log("heard")
-    console.log (event.detail.moodChosen)
+    // console.log("heard", event.detail.moodChosen)
     // debugger
+const EntryFilter = () => {
+
     getEntries()
+    .then(getMoods)
+    .then(getInstructor)
     .then(() => {
         const entryArray = useJournalEntries()
+        const moods = useMoods()
+        const instructor = useInstructor()
         const moodPicked= event.detail.moodChosen
-        const filteredEntries= entryArray.filter(mood => parseInt(mood.moodId) === parseInt(moodPicked))
-    
-        console.log(filteredEntries)
-    })
+        const filteredEntry = entryArray.filter(mood => parseInt(mood.moodId) === parseInt(moodPicked))
+        // const entryfilter = filteredEntries.map(entry => entry)
+        render(filteredEntry, moods, instructor)
+    }) 
+}
+return EntryFilter()
+
 })
 
 
